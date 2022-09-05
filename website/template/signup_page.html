@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title> Signup page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: green;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            
+            }
+            label{
+                font: size 20px;
+            }
+            form{
+                border: 3px solid white;
+            }
+
+
+            input[type="email"],input[type="text"]{
+                 width: 25%;
+                 font-size: 15px;
+                 margin: 8px 0px;
+                 padding: 12px 20px ;
+                 display: inline-block;
+                 border: 2pc solid green;
+                box-sizing: border-box;  
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button.hover{
+                opacity: 0.7;
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            .imgcontainer{
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+            img.avatar{
+                width: 10%;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <center><h1> Register from</h1></center>
+        <from action="#" method="post">
+            {% csrf_token %}
+            <center><dic class="container">
+                <div class="imgcontainer"></div>
+                <img src="" alt="avatar" class="avatar">
+                </dic>
+                <label for="first_name"> <b>First name</b></label>
+                <input type="text" placeholder="Enter your first name" name="first_name" required >
+                <label for="last_name"> <b>Last name</b></label>
+                <input type="text" placeholder="Enter your last name " name="last_name" required>
+                <label for="sex"> <b>Sex</b></label>
+                <input type="radio" name="sex" value="male" required>
+                <label> <b>Male</b></label>
+                <input type="radio" name="sex" value="female" required>
+                <label> <b>Female</b></label>
+                <label for="email"> <b> Email ID :</b></label>
+                <input type="email" placeholder="Enter email " name="email" float="right" required>
+                <label for="'password"> <b>Password</b></label>
+                <input type="text" placeholder="Enter password" name ="password" required><br>
+                <button type="sumit"> <b>Signup</b></button><br>
+                Already an account <a href=""> Login</a>
+                 
+            </dic></center>
+        </from>
+    </body>
+</html>
+
+
+
